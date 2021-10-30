@@ -30,7 +30,7 @@ const Contact = () => {
                 <div className="contact">
                     <div className="container text-color">
                        <div className="mb-5 text-center">
-                          <h5> Let's Start a conversation!</h5>
+                          <h6> Let's Start a conversation!</h6>
                           <h2 className="fw-bold">Contact Us</h2>
                        </div>
                     </div>

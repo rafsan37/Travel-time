@@ -29,6 +29,9 @@ const Header = () => {
         <Navbar.Text className="text-dark">
             <a className="text-dark" href="#login">{user?.displayName}</a>
          </Navbar.Text>
+        <Navbar.Text className="text-dark">
+            <img src={user?.photoURL} alt="" className="rounded-circle img-size2" />
+         </Navbar.Text>
          <Button onClick={logOut} variant="dark" className="ms-1">LogOut</Button></>:
        <Nav.Link as={Link} to="/login" className="nav-style2 me-2 fs-5 fw-bold">Login</Nav.Link> }   
     </Navbar.Collapse>

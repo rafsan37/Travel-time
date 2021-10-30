@@ -7,9 +7,11 @@ import './privateRoute.css'
 const PrivateRoute = ({ children, ...rest }) => {
     const  {user, isLoading} = useAuth();
         if(isLoading){
-            return <Spinner className="container1" animation="border" role="status">
+            return <div className="spinner">
+                <Spinner  animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
+            </div>
         
         }
     return (
