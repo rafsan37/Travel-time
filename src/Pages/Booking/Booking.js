@@ -52,15 +52,17 @@ if(res.data.insertedId){
       <input {...register("name", { required: true, maxLength: 20 })} placeholder='Name' defaultValue={user?.displayName} readOnly/>
       <input {...register("email", { required: true})} placeholder='Email'
         defaultValue={user?.email} readOnly
-      />
+      />   
       <input {...register("destination", { required: true})} placeholder='Destination'
         defaultValue={service?.name}
       />
-      <textarea {...register("Valid Address")} placeholder='Address'/>
-      <input type="number" {...register("phone")} placeholder='Valid Phone Number'/>
+      <input {...register("Valid Address")} placeholder='Address'/>
+      <input type="number" {...register("phone")} placeholder='Phone Number'/>
       <input type="text" {...register("Status")} placeholder=''
       defaultValue='pending' readOnly/>
-      
+      <input type="text" {...register("img")} placeholder=''
+      defaultValue={service?.img} readOnly/>
+
       <input className='bg-warning border-0 py-2 mt-3 rounded' type="submit" value='Place the Booking' />
     </form>
     </div>
