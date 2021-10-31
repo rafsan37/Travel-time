@@ -41,14 +41,14 @@ const Myorders = () => {
                 
                  
                  
-                 <Card style={{ width: '22rem' }}>
+                 <Card className="my-3" style={{ width: '22rem' }}>
   <Card.Body>
-    <Card.Title><h3>Name: {myOrder.name}</h3></Card.Title>
+    <Card.Title><h4>My Name: {myOrder.name}</h4></Card.Title>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem> <p className="text-info">My Booking place: {myOrder.destination}</p></ListGroupItem>
-    <ListGroupItem> <p className="text-info">My Booking place: {myOrder.destination}</p></ListGroupItem>
-    <ListGroupItem><p>My Booking Status: {myOrder.Status}</p></ListGroupItem>
+    <ListGroupItem> <h5 className="text-info">Booking place: {myOrder.destination}</h5></ListGroupItem>
+    <ListGroupItem> <p className="fw-bold">Price: {myOrder.price}</p></ListGroupItem>
+    <ListGroupItem><p className="text-warning">My Booking Status: {myOrder.Status}</p></ListGroupItem>
     <ListGroupItem><button onClick={()=> cancel(myOrder._id)} className="btn btn-danger rounded">Cancel Booking</button></ListGroupItem>
   </ListGroup>
 </Card>

@@ -55,6 +55,7 @@ const ManageAllorders = () => {
       <th>Email</th>
       <th>Username</th>
       <th>Destination</th>
+      <th>Price</th>
       <th>Status</th>
       <th>Confirm</th>
       <th>Cancellation</th>
@@ -67,7 +68,8 @@ const ManageAllorders = () => {
       <td className="py-4">{order.email}</td>
       <td className="py-4">{order.name}</td>
       <td className="py-4">{order.destination}</td>
-      <td className="py-4 text-info fs-6 fw-bold">{order.Status}</td>
+      <td className="py-4  px-3">${order.price}</td>
+      <td className="py-4 text-warning  fw-bold">{order.Status}</td>
       <td className="py-0"><button onClick={()=> handele(order._id)} className="btn btn-success rounded"    
       >Confirm</button></td>
       <td className="py-0"><button

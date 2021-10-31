@@ -33,7 +33,7 @@ const Header = () => {
             <img src={user?.photoURL} alt="" className="rounded-circle img-size2" />
          </Navbar.Text>
          <Button onClick={logOut} variant="dark" className="ms-1">LogOut</Button></>:
-       <Nav.Link as={Link} to="/login" className="nav-style2 me-2 fs-5 fw-bold">Login</Nav.Link> }   
+       <Nav.Link as={Link} to="/login" className="nav-style me-2 fs-5 fw-bold">Login</Nav.Link> }   
     </Navbar.Collapse>
   </Navbar.Collapse>
   </Container>

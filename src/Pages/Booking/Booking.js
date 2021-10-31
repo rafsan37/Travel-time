@@ -47,22 +47,25 @@ if(res.data.insertedId){
         <Col>
         <div className='text-center add-booking container'>
       <h2>Add a Booking</h2>
-      <p>Booking Price: {service?.price}</p>
+      <p>Booking Price:$ {service?.price}</p>
       <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("name", { required: true, maxLength: 20 })} placeholder='Name' defaultValue={user?.displayName} readOnly/>
       <input {...register("email", { required: true})} placeholder='Email'
         defaultValue={user?.email} readOnly
       />   
-      <input {...register("destination", { required: true})} placeholder='Destination'
-        defaultValue={service?.name}
+      { service.name && <input {...register("destination", { required: true})} placeholder='Destination'
+        defaultValue={service.name} readOnly
+      />}
+      { service.price &&
+        <input {...register("price", { required: true})} 
+        defaultValue={service.price}
       />
-      <input {...register("Valid Address")} placeholder='Address'/>
-      <input type="number" {...register("phone")} placeholder='Phone Number'/>
+      }
+      <input {...register("Valid Address", { required: true})} placeholder='Address'/>
+      <input type="number" {...register("phone",{ required: true})} placeholder='Phone Number'/>
       <input type="text" {...register("Status")} placeholder=''
-      defaultValue='pending' readOnly/>
-      <input type="text" {...register("img")} placeholder=''
-      defaultValue={service?.img} readOnly/>
-
+      defaultValue='Pending' readOnly/>
+      
       <input className='bg-warning border-0 py-2 mt-3 rounded' type="submit" value='Place the Booking' />
     </form>
     </div>
