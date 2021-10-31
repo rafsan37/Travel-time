@@ -6,7 +6,7 @@ const ManageAllorders = () => {
     const [orders, setOrders] = useState([]);
     const [reload, setReload] = useState(true);
     useEffect(()=> {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://ghoulish-skull-44107.herokuapp.com/bookings')
         .then(res => res.json())
         .then(data => setOrders(data));
     },[reload])
@@ -14,7 +14,7 @@ const ManageAllorders = () => {
     function handele(id){
       const confirmation = window.confirm('Are you sure to Confirm !')
       if(confirmation){
-        fetch(`http://localhost:5000/confirmation/${id}`, {
+        fetch(`https://ghoulish-skull-44107.herokuapp.com/confirmation/${id}`, {
           method: "put",
         })
         .then(res => res.json())
@@ -28,7 +28,7 @@ const ManageAllorders = () => {
     function cancel(id) {
       const confirmation = window.confirm('Are you sure to delete !')
       if(confirmation) {
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://ghoulish-skull-44107.herokuapp.com/delete/${id}`,{
         method: "delete",
       })
       .then(res=> res.json())

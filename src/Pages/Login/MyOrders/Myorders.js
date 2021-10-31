@@ -6,7 +6,7 @@ const Myorders = () => {
     const {user} = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://ghoulish-skull-44107.herokuapp.com/bookings')
         .then(res => res.json())
         .then(data => setOrders(data));
     },[])
@@ -14,7 +14,7 @@ const Myorders = () => {
     function cancel(id) {
         const confirmation = window.confirm('Are you sure to delete !')
         if(confirmation) {
-          fetch(`http://localhost:5000/delete/${id}`,{
+          fetch(`https://ghoulish-skull-44107.herokuapp.com/delete/${id}`,{
           method: "delete",
         })
         .then(res=> res.json())
@@ -36,7 +36,7 @@ const Myorders = () => {
             <h1 className="my-3">Welcome To Travel Time</h1>
         <div className="row">
            { 
-             myOrders.map(myOrder => <div className="col-md-4" key={myOrder._id}>
+             myOrders.map(myOrder => <div className="col-md-4 mx-auto" key={myOrder._id}>
                  
                 
                  

@@ -14,7 +14,7 @@ const Booking = () => {
     const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
     console.log(data)
-  axios.post('http://localhost:5000/bookings', data)
+  axios.post('https://ghoulish-skull-44107.herokuapp.com/bookings', data)
   .then(res =>{
 if(res.data.insertedId){
  alert('Order processed successfully');
@@ -24,7 +24,7 @@ if(res.data.insertedId){
   };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://ghoulish-skull-44107.herokuapp.com/services/${serviceId}`)
         .then(res => res.json())
         .then(data => setService(data));
     },[])
