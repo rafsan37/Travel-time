@@ -43,11 +43,11 @@ const Myorders = () => {
                  
                  <Card className="my-3" style={{ width: '22rem' }}>
   <Card.Body>
-    <Card.Title><h4>My Name: {myOrder.name}</h4></Card.Title>
+    <Card.Title><h5>My Name: {myOrder.name}</h5></Card.Title>
   </Card.Body>
   <ListGroup className="list-group-flush">
     <ListGroupItem> <h5 className="text-info">Booking place: {myOrder.destination}</h5></ListGroupItem>
-    <ListGroupItem> <p className="fw-bold">Price: {myOrder.price}</p></ListGroupItem>
+    <ListGroupItem> <p className="fw-bold text-success">Price: ${myOrder.price}</p></ListGroupItem>
     <ListGroupItem><p className="text-warning">My Booking Status: {myOrder.Status}</p></ListGroupItem>
     <ListGroupItem><button onClick={()=> cancel(myOrder._id)} className="btn btn-danger rounded">Cancel Booking</button></ListGroupItem>
   </ListGroup>
